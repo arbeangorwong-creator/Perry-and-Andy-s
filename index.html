@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andy & Perry Wedding Invitation</title>
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://perry-and-andy.netlify.app/" /> 
+  <meta property="og:title" content="Perry Ieong & Andy Wong | Invitation" />
+  <meta property="og:description" content="Wedding Invitation | November 27, 2025 | Praça da Vila da Taipa" />
+  <meta property="og:image" content="https://perry-and-andy.netlify.app/images/Profile.jpg" />
+  
+  <meta property="fb:app_id" content="712701255188534" />
+
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Perry Ieong & Andy Wong | Invitation" />
+  <meta property="twitter:description" content="Wedding Invitation | November 27, 2025 | Praça da Vila da Taipa" />
+  <meta property="twitter:image" content="images/watercolor_forest.jpg" />
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <style>
+    /* 將整個網站字體設為 Cormorant Garamond */
+    .font-elegant-serif {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    /* 圖片樣式：限制寬度並**縮小**以節省垂直空間 */
+    .header-img {
+      max-width: 400px; /* 縮小至 250px */
+      width: 100%; 
+      margin: 0 auto; 
+    }
+    /* 定義按鈕樣式 (已縮小並改用淡墨綠色) */
+    .btn-map {
+      display: inline-block;
+      padding: 8px 16px; 
+      font-size: 0.9rem; 
+      background-color: #779a8e; /* 淡墨綠色 */
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 5px; 
+      transition: background-color 0.3s;
+    }
+    .btn-map:hover {
+        background-color: #658176; 
+    }
+  </style>
+
+  <script>
+    function countdown() {
+      const weddingDate = new Date('2025-11-27T11:30:00').getTime();
+      const now = new Date().getTime();
+      const diff = weddingDate - now;
+      if (diff <= 0) {
+        document.getElementById('countdown').innerText = "It's the wedding day!";
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      document.getElementById('countdown').innerText = `${days} days ${hours} hrs ${mins} mins`;
+    }
+    setInterval(countdown, 1000);
+  </script>
+</head>
+<body class="bg-gray-50 text-center flex flex-col items-center justify-center min-h-screen p-2 font-elegant-serif font-bold">
+
+   <img src="images/watercolor_forest.jpg" alt="Watercolor Forest Design" class="header-img">
+
+  <h1 class="text-4xl tracking-wider mb-3 italic font-bold">
+    Perry Ieong <br>
+    & <br>
+    Andy Wong
+  </h1>
+
+  <div class="card text-center border border-gray-300 rounded-lg p-4 shadow-lg max-w-lg w-full mb-2 italic">
+    <p class="text-gray-600 mb-1">Invite you to share with us a celebration of love</p>
+    
+    <p class="text-gray-800 mb-2 text-2xl">
+      November 27, 2025 <br>
+      11:30 AM – 2:00 PM
+    </p>
+
+    <p class="text-gray-600 mb-2">Location: Praça da Vila da Taipa (嘉模前地)</p>
+    <a href="https://maps.google.com/?q=嘉模前地" target="_blank" class="btn-map">📍 Open in Google Maps</a>
+  </div>
+
+  <div class="countdown-frame border border-gray-300 rounded-lg p-2 shadow-md max-w-sm w-full mb-2">
+      <p class="text-gray-500 text-sm mb-1">Countdown to our special day</p>
+      <p id="countdown" class="text-2xl">Loading...</p>
+  </div>
+
+  <p class="mb-2 text-gray-400 text-sm">We can’t wait to celebrate with you.</p>
+
+  <div class="photo-grid grid grid-cols-4 gap-1 w-full max-w-lg">
+      <img src="images/photo1.jpg" alt="Wedding photo 1" class="w-full h-auto object-cover rounded-sm aspect-square">
+      <img src="images/photo2.jpg" alt="Wedding photo 2" class="w-full h-auto object-cover rounded-sm aspect-square">
+      <img src="images/photo3.jpg" alt="Wedding photo 3" class="w-full h-auto object-cover rounded-sm aspect-square">
+      <img src="images/photo4.jpg" alt="Wedding photo 4" class="w-full h-auto object-cover rounded-sm aspect-square">
+  </div>
+</body>
+</html>
